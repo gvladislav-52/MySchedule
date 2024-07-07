@@ -23,11 +23,41 @@ class OptionsScheduleTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    let reapetSwitch: UISwitch = {
+        let repeatSwitch = UISwitch()
+        repeatSwitch.isOn = true
+        repeatSwitch.isHidden = true
+        repeatSwitch.onTintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        repeatSwitch.translatesAutoresizingMaskIntoConstraints = false
+        return repeatSwitch
+    }()
+    
+    let cellNameArray = [["Date", "Time"],
+                         ["Name", "Type", "Building", "Audience"],
+                         ["Teacher Name"],
+                         [""],
+                         ["Repeat every 7 days"]]
+    
+    func cellConfigure(indexPath: IndexPath) {
+        nameCellLabel.text = cellNameArray[indexPath.section][indexPath.row]
         
+        if indexPath == [3,0] {
+            backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        }
+        if indexPath == [4,0] {
+            reapetSwitch.isHidden = false
+        }
+    }
+    
+    @objc func switchChange(paramTarget: UISwitch) {
+        print("switch")
+    }
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setBackgroundViewCell()
         setNameCellLabel()
+        setRepeatSwitch()
         self.selectionStyle = .none
         self.backgroundColor = .clear
     }
@@ -50,7 +80,17 @@ class OptionsScheduleTableViewCell: UITableViewCell {
         self.addSubview(nameCellLabel)
         NSLayoutConstraint.activate([
             nameCellLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            nameCellLabel.leadingAnchor.constraint(equalTo: backgroundViewCell.trailingAnchor, constant: 15),
+            nameCellLabel.leadingAnchor.constraint(equalTo: backgroundViewCell.leadingAnchor, constant: 15),
         ])
+    }
+    
+    private func setRepeatSwitch() {
+        self.contentView.addSubview(reapetSwitch)
+        NSLayoutConstraint.activate([
+            reapetSwitch.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            reapetSwitch.trailingAnchor.constraint(equalTo: backgroundViewCell.trailingAnchor, constant: -20),
+        ])
+        
+        reapetSwitch.addTarget(self, action: #selector(switchChange(paramTarget:)), for: .valueChanged)
     }
 }
