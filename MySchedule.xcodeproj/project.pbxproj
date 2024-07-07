@@ -10,6 +10,10 @@
 		22088CEB2C3AD0E0006A5692 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CEA2C3AD0DF006A5692 /* CalendarController.swift */; };
 		22088CED2C3AD46C006A5692 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CEC2C3AD46C006A5692 /* ScheduleTableViewCell.swift */; };
 		22088CF12C3AE275006A5692 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CF02C3AE275006A5692 /* UIStackView.swift */; };
+		22088CF32C3AE873006A5692 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CF22C3AE873006A5692 /* UILabel.swift */; };
+		22088CF52C3AEED7006A5692 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CF42C3AEED7006A5692 /* UIFont.swift */; };
+		22088CF72C3AF902006A5692 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CF62C3AF902006A5692 /* TasksTableViewCell.swift */; };
+		22088CFA2C3B01B7006A5692 /* PressButtonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CF92C3B01B7006A5692 /* PressButtonProtocols.swift */; };
 		22D6435C2C3A9ED2002DEC5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6435B2C3A9ED2002DEC5F /* AppDelegate.swift */; };
 		22D6435E2C3A9ED2002DEC5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6435D2C3A9ED2002DEC5F /* SceneDelegate.swift */; };
 		22D643602C3A9ED2002DEC5F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6435F2C3A9ED2002DEC5F /* MainTabBarController.swift */; };
@@ -25,6 +29,10 @@
 		22088CEA2C3AD0DF006A5692 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		22088CEC2C3AD46C006A5692 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		22088CF02C3AE275006A5692 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		22088CF22C3AE873006A5692 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		22088CF42C3AEED7006A5692 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		22088CF62C3AF902006A5692 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
+		22088CF92C3B01B7006A5692 /* PressButtonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressButtonProtocols.swift; sourceTree = "<group>"; };
 		22D643582C3A9ED2002DEC5F /* MySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D6435B2C3A9ED2002DEC5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D6435D2C3A9ED2002DEC5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				22D643712C3AA140002DEC5F /* TasksViewController.swift */,
+				22088CF62C3AF902006A5692 /* TasksTableViewCell.swift */,
 			);
 			path = TasksScene;
 			sourceTree = "<group>";
@@ -110,8 +119,18 @@
 			isa = PBXGroup;
 			children = (
 				22088CF02C3AE275006A5692 /* UIStackView.swift */,
+				22088CF22C3AE873006A5692 /* UILabel.swift */,
+				22088CF42C3AEED7006A5692 /* UIFont.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		22088CF82C3B0195006A5692 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				22088CF92C3B01B7006A5692 /* PressButtonProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		22D6434F2C3A9ED2002DEC5F = {
@@ -138,6 +157,7 @@
 				22088CEE2C3AE251006A5692 /* Extensions */,
 				22088CE82C3ACC69006A5692 /* App */,
 				22088CE52C3ACC21006A5692 /* ScheduleScene */,
+				22088CF82C3B0195006A5692 /* Protocols */,
 				22088CE62C3ACC3B006A5692 /* TasksScene */,
 				22088CE72C3ACC4B006A5692 /* ContactsScene */,
 				22088CE92C3ACC80006A5692 /* Controllers */,
@@ -276,11 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22088CF72C3AF902006A5692 /* TasksTableViewCell.swift in Sources */,
+				22088CF32C3AE873006A5692 /* UILabel.swift in Sources */,
 				22D643602C3A9ED2002DEC5F /* MainTabBarController.swift in Sources */,
 				22088CF12C3AE275006A5692 /* UIStackView.swift in Sources */,
 				22D6435C2C3A9ED2002DEC5F /* AppDelegate.swift in Sources */,
+				22088CFA2C3B01B7006A5692 /* PressButtonProtocols.swift in Sources */,
 				22D643722C3AA140002DEC5F /* TasksViewController.swift in Sources */,
 				22088CEB2C3AD0E0006A5692 /* CalendarController.swift in Sources */,
+				22088CF52C3AEED7006A5692 /* UIFont.swift in Sources */,
 				22D6435E2C3A9ED2002DEC5F /* SceneDelegate.swift in Sources */,
 				22D643702C3AA131002DEC5F /* ScheduleViewController.swift in Sources */,
 				22088CED2C3AD46C006A5692 /* ScheduleTableViewCell.swift in Sources */,

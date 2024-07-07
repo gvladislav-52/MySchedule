@@ -50,6 +50,7 @@ extension ScheduleViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.bounces = false   //отключение прокрутки если мало элементов
         tableView.register(ScheduleTableViewCell.self, forCellReuseIdentifier: idScheduleCell)
         
         view.addSubview(tableView)
@@ -67,24 +68,17 @@ extension ScheduleViewController {
 extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: idScheduleCell, for: indexPath) as! ScheduleTableViewCell
     
-//        switch indexPath.row {
-//        case 0: cell.backgroundColor = .red
-//        case 1: cell.backgroundColor = .blue
-//        default:
-//            cell.backgroundColor = .green
-//        }
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 80
     }
 }
 
