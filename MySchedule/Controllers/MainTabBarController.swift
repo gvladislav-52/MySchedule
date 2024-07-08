@@ -18,7 +18,7 @@ class MainTabBarController: UITabBarController {
         
         let scheduleViewController = createNavController(vc: ScheduleViewController(), itemName: "Schedule", ItemImage: "calendar.badge.clock")
         let tasksViewController = createNavController(vc: TasksViewController(), itemName: "Task", ItemImage: "text.badge.checkmark")
-        let contactsViewController = createNavController(vc: ContactsViewController(), itemName: "Contacts", ItemImage: "rectangle.stack.person.crop")
+        let contactsViewController = createNavController(vc: ContactsTableViewController(), itemName: "Contacts", ItemImage: "rectangle.stack.person.crop")
         
         setupTabUI()
         viewControllers = [scheduleViewController, tasksViewController, contactsViewController]
