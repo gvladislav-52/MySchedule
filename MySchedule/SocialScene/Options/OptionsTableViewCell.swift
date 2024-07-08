@@ -33,19 +33,21 @@ class OptionsTableViewCell: UITableViewCell {
         return repeatSwitch
     }()
     
-    let cellNameArray = [["Date", "Time"],
-                         ["Name", "Type", "Building", "Audience"],
-                         ["Teacher Name"],
-                         [""],
-                         ["Repeat every 7 days"]]
-    
-    func cellConfigure(indexPath: IndexPath) {
-        nameCellLabel.text = cellNameArray[indexPath.section][indexPath.row]
+    func cellScheduleConfigure(nameArray: [[String]],indexPath: IndexPath) {
+        nameCellLabel.text = nameArray[indexPath.section][indexPath.row]
         
         if indexPath == [3,0] {
             backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         }
         setRepeatSwitch(indexPath: indexPath)
+    }
+    
+    func cellTaskConfigure(nameArray: [String], indexPath: IndexPath) {
+        nameCellLabel.text = nameArray[indexPath.section]
+        
+        if indexPath == [3,0] {
+            backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        }
     }
     
     @objc func switchChange(paramTarget: UISwitch) {

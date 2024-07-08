@@ -15,6 +15,12 @@ class OptionTableViewController: UITableViewController {
     
     let headerNameArray: [String] = ["DATA AND TIME", "LESSON", "TEACHER", "COLOR", "PERIOD"]
     
+    let cellNameArray = [["Date", "Time"],
+                         ["Name", "Type", "Building", "Audience"],
+                         ["Teacher Name"],
+                         [""],
+                         ["Repeat every 7 days"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +50,7 @@ class OptionTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: idOptionsSheduleCell, for: indexPath) as! OptionsTableViewCell
-        cell.cellConfigure(indexPath: indexPath)
+        cell.cellScheduleConfigure(nameArray: cellNameArray, indexPath: indexPath)
         return cell
     }
     
