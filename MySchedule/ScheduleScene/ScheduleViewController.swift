@@ -69,7 +69,7 @@ extension ScheduleViewController {
     }
     
     @objc func AddButtonTapped() {
-        let scheduleOption = OptionScheduleTableViewController()
+        let scheduleOption = OptionTableViewController()
         navigationController?.pushViewController(scheduleOption, animated: true)
     }
 }

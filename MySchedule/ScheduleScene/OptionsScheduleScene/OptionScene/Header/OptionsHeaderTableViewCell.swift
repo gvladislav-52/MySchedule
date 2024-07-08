@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeaderOptionsTableViewCell: UITableViewHeaderFooterView {
+class OptionsHeaderTableViewCell: UITableViewHeaderFooterView {
     
     let headerLabel = UILabel(text: "", font: .avenirNext14())
     
