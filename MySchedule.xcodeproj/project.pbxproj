@@ -17,6 +17,7 @@
 		22088CFC2C3B0AE9006A5692 /* OptionsScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CFB2C3B0AE9006A5692 /* OptionsScheduleViewController.swift */; };
 		22088CFF2C3B0E0E006A5692 /* OptionsScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CFE2C3B0E0E006A5692 /* OptionsScheduleTableViewCell.swift */; };
 		22088D012C3B13F8006A5692 /* HeaderOptionScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088D002C3B13F8006A5692 /* HeaderOptionScheduleTableViewCell.swift */; };
+		22CDD9462C3C08BB00722228 /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CDD9452C3C08BB00722228 /* AlertDate.swift */; };
 		22D6435C2C3A9ED2002DEC5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6435B2C3A9ED2002DEC5F /* AppDelegate.swift */; };
 		22D6435E2C3A9ED2002DEC5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6435D2C3A9ED2002DEC5F /* SceneDelegate.swift */; };
 		22D643602C3A9ED2002DEC5F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6435F2C3A9ED2002DEC5F /* MainTabBarController.swift */; };
@@ -39,6 +40,7 @@
 		22088CFB2C3B0AE9006A5692 /* OptionsScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScheduleViewController.swift; sourceTree = "<group>"; };
 		22088CFE2C3B0E0E006A5692 /* OptionsScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		22088D002C3B13F8006A5692 /* HeaderOptionScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOptionScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		22CDD9452C3C08BB00722228 /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
 		22D643582C3A9ED2002DEC5F /* MySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D6435B2C3A9ED2002DEC5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D6435D2C3A9ED2002DEC5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				22088CFD2C3B0DD9006A5692 /* OptionsScheduleScene */,
 				22D6436F2C3AA131002DEC5F /* ScheduleViewController.swift */,
 				22088CEC2C3AD46C006A5692 /* ScheduleTableViewCell.swift */,
+				22CDD9452C3C08BB00722228 /* AlertDate.swift */,
 			);
 			path = ScheduleScene;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				22D6435E2C3A9ED2002DEC5F /* SceneDelegate.swift in Sources */,
 				22D643702C3AA131002DEC5F /* ScheduleViewController.swift in Sources */,
 				22088CED2C3AD46C006A5692 /* ScheduleTableViewCell.swift in Sources */,
+				22CDD9462C3C08BB00722228 /* AlertDate.swift in Sources */,
 				22D643742C3AA151002DEC5F /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
