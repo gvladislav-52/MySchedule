@@ -18,6 +18,11 @@
 		22088CFF2C3B0E0E006A5692 /* OptionsScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CFE2C3B0E0E006A5692 /* OptionsScheduleTableViewCell.swift */; };
 		22088D012C3B13F8006A5692 /* HeaderOptionScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088D002C3B13F8006A5692 /* HeaderOptionScheduleTableViewCell.swift */; };
 		22CDD9462C3C08BB00722228 /* AlertDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CDD9452C3C08BB00722228 /* AlertDate.swift */; };
+		22CDD9482C3C0F5B00722228 /* AlertTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CDD9472C3C0F5B00722228 /* AlertTime.swift */; };
+		22CDD94B2C3C1DC500722228 /* AlertForCellName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CDD94A2C3C1DC500722228 /* AlertForCellName.swift */; };
+		22CDD94D2C3C29FE00722228 /* ScheduleColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CDD94C2C3C29FE00722228 /* ScheduleColorViewController.swift */; };
+		22CDD94F2C3C2A1B00722228 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CDD94E2C3C2A1B00722228 /* TeachersViewController.swift */; };
+		22CDD9512C3C345500722228 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CDD9502C3C345500722228 /* UIAlertController.swift */; };
 		22D6435C2C3A9ED2002DEC5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6435B2C3A9ED2002DEC5F /* AppDelegate.swift */; };
 		22D6435E2C3A9ED2002DEC5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6435D2C3A9ED2002DEC5F /* SceneDelegate.swift */; };
 		22D643602C3A9ED2002DEC5F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6435F2C3A9ED2002DEC5F /* MainTabBarController.swift */; };
@@ -41,6 +46,11 @@
 		22088CFE2C3B0E0E006A5692 /* OptionsScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		22088D002C3B13F8006A5692 /* HeaderOptionScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOptionScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		22CDD9452C3C08BB00722228 /* AlertDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDate.swift; sourceTree = "<group>"; };
+		22CDD9472C3C0F5B00722228 /* AlertTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTime.swift; sourceTree = "<group>"; };
+		22CDD94A2C3C1DC500722228 /* AlertForCellName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertForCellName.swift; sourceTree = "<group>"; };
+		22CDD94C2C3C29FE00722228 /* ScheduleColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleColorViewController.swift; sourceTree = "<group>"; };
+		22CDD94E2C3C2A1B00722228 /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
+		22CDD9502C3C345500722228 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		22D643582C3A9ED2002DEC5F /* MySchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D6435B2C3A9ED2002DEC5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D6435D2C3A9ED2002DEC5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +84,7 @@
 				22088CFD2C3B0DD9006A5692 /* OptionsScheduleScene */,
 				22D6436F2C3AA131002DEC5F /* ScheduleViewController.swift */,
 				22088CEC2C3AD46C006A5692 /* ScheduleTableViewCell.swift */,
-				22CDD9452C3C08BB00722228 /* AlertDate.swift */,
+				22CDD94C2C3C29FE00722228 /* ScheduleColorViewController.swift */,
 			);
 			path = ScheduleScene;
 			sourceTree = "<group>";
@@ -92,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				22D643732C3AA151002DEC5F /* ContactsViewController.swift */,
+				22CDD94E2C3C2A1B00722228 /* TeachersViewController.swift */,
 			);
 			path = ContactsScene;
 			sourceTree = "<group>";
@@ -131,6 +142,7 @@
 				22088CF02C3AE275006A5692 /* UIStackView.swift */,
 				22088CF22C3AE873006A5692 /* UILabel.swift */,
 				22088CF42C3AEED7006A5692 /* UIFont.swift */,
+				22CDD9502C3C345500722228 /* UIAlertController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -146,11 +158,22 @@
 		22088CFD2C3B0DD9006A5692 /* OptionsScheduleScene */ = {
 			isa = PBXGroup;
 			children = (
+				22CDD9492C3C1DA900722228 /* Alert */,
 				22088CFB2C3B0AE9006A5692 /* OptionsScheduleViewController.swift */,
 				22088CFE2C3B0E0E006A5692 /* OptionsScheduleTableViewCell.swift */,
 				22088D002C3B13F8006A5692 /* HeaderOptionScheduleTableViewCell.swift */,
 			);
 			path = OptionsScheduleScene;
+			sourceTree = "<group>";
+		};
+		22CDD9492C3C1DA900722228 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				22CDD9452C3C08BB00722228 /* AlertDate.swift */,
+				22CDD9472C3C0F5B00722228 /* AlertTime.swift */,
+				22CDD94A2C3C1DC500722228 /* AlertForCellName.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		22D6434F2C3A9ED2002DEC5F = {
@@ -319,6 +342,8 @@
 				22088D012C3B13F8006A5692 /* HeaderOptionScheduleTableViewCell.swift in Sources */,
 				22088CFC2C3B0AE9006A5692 /* OptionsScheduleViewController.swift in Sources */,
 				22088CF72C3AF902006A5692 /* TasksTableViewCell.swift in Sources */,
+				22CDD94B2C3C1DC500722228 /* AlertForCellName.swift in Sources */,
+				22CDD9512C3C345500722228 /* UIAlertController.swift in Sources */,
 				22088CF32C3AE873006A5692 /* UILabel.swift in Sources */,
 				22D643602C3A9ED2002DEC5F /* MainTabBarController.swift in Sources */,
 				22088CF12C3AE275006A5692 /* UIStackView.swift in Sources */,
@@ -326,11 +351,14 @@
 				22088CFA2C3B01B7006A5692 /* PressButtonProtocols.swift in Sources */,
 				22D643722C3AA140002DEC5F /* TasksViewController.swift in Sources */,
 				22088CEB2C3AD0E0006A5692 /* CalendarController.swift in Sources */,
+				22CDD94F2C3C2A1B00722228 /* TeachersViewController.swift in Sources */,
 				22088CFF2C3B0E0E006A5692 /* OptionsScheduleTableViewCell.swift in Sources */,
+				22CDD9482C3C0F5B00722228 /* AlertTime.swift in Sources */,
 				22088CF52C3AEED7006A5692 /* UIFont.swift in Sources */,
 				22D6435E2C3A9ED2002DEC5F /* SceneDelegate.swift in Sources */,
 				22D643702C3AA131002DEC5F /* ScheduleViewController.swift in Sources */,
 				22088CED2C3AD46C006A5692 /* ScheduleTableViewCell.swift in Sources */,
+				22CDD94D2C3C29FE00722228 /* ScheduleColorViewController.swift in Sources */,
 				22CDD9462C3C08BB00722228 /* AlertDate.swift in Sources */,
 				22D643742C3AA151002DEC5F /* ContactsViewController.swift in Sources */,
 			);

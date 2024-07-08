@@ -19,6 +19,7 @@ class OptionScheduleTableViewController: UITableViewController {
         title = "Option Schedule"
         tableView.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.9490196078, blue: 0.968627451, alpha: 1)
         tableView.separatorStyle = .none
+        tableView.bounces = false 
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(OptionsScheduleTableViewCell.self, forCellReuseIdentifier: idOptionsSheduleCell)
@@ -63,13 +64,32 @@ class OptionScheduleTableViewController: UITableViewController {
         let cell = tableView.cellForRow(at: indexPath) as! OptionsScheduleTableViewCell
         
         switch indexPath {
-        case [0,0]: alertDate(label: cell.nameCellLabel) { (numberWeekday, date) in
+        case [0,0]: alertDate(label: cell.nameCellLabel) { [weak self]  (numberWeekday, date) in
             print(numberWeekday, date)
             
         }
-        default:
-            print("Error")
+        case [0,1]: alertTime(label: cell.nameCellLabel) { [weak self] (date) in
+            print(date)
         }
+            
+        case [1,0]: alertForCellName(label: cell.nameCellLabel, name: "Name lesson", placeholder: "Enter name lesson")
+        case [1,1]: alertForCellName(label: cell.nameCellLabel, name: "Type lesson", placeholder: "Enter type lesson")
+        case [1,2]: alertForCellName(label: cell.nameCellLabel, name: "Building number", placeholder: "Enter number of building")
+        case [1,3]: alertForCellName(label: cell.nameCellLabel, name: "Audience number", placeholder: "Enter number of audience")
+        case [2,0]:
+            pushController(vc: TeachersViewController())
+        case [3,0]:
+            pushController(vc: ScheduleColorViewController())
+            
+        default:
+            print("Tap OptionsTableView")
+        }
+    }
+    
+    func pushController(vc: UIViewController) {
+        let viewController = vc
+        navigationController?.navigationBar.topItem?.title = "Options"
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
 }

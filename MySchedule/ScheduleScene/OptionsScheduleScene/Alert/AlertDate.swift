@@ -17,7 +17,7 @@ extension UIViewController {
         datePicker.preferredDatePickerStyle = .wheels
         
         alert.view.addSubview(datePicker)
-        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+        let ok = UIAlertAction(title: "OK", style: .default) { [weak self] (action) in
             
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd.MM.yyyy"
@@ -27,16 +27,16 @@ extension UIViewController {
             let component = calendar.dateComponents([.weekday], from: datePicker.date)
             
             guard let weekday = component.weekday else {return}
-            let numberWeekDay = weekday
             let date = datePicker.date as NSDate
-            completionHandler(numberWeekDay, date)
+            completionHandler(weekday, date)
             
             label.text = dateString
         }
-        
         let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         alert.addAction(ok)
         alert.addAction(cancel)
+        
+        alert.negativeWidthContraint()
         
         alert.view.heightAnchor.constraint(equalToConstant: 300).isActive = true
         datePicker.translatesAutoresizingMaskIntoConstraints = false
