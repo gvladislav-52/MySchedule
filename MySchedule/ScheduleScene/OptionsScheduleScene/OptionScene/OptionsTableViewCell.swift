@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OptionsScheduleTableViewCell: UITableViewCell {
+class OptionsTableViewCell: UITableViewCell {
     
     let backgroundViewCell: UIView = {
         let view = UIView()
@@ -27,7 +27,7 @@ class OptionsScheduleTableViewCell: UITableViewCell {
     let reapetSwitch: UISwitch = {
         let repeatSwitch = UISwitch()
         repeatSwitch.isOn = true
-        repeatSwitch.isHidden = true
+        repeatSwitch.isHidden = false
         repeatSwitch.onTintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         repeatSwitch.translatesAutoresizingMaskIntoConstraints = false
         return repeatSwitch
@@ -45,9 +45,7 @@ class OptionsScheduleTableViewCell: UITableViewCell {
         if indexPath == [3,0] {
             backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         }
-        if indexPath == [4,0] {
-            reapetSwitch.isHidden = false
-        }
+        setRepeatSwitch(indexPath: indexPath)
     }
     
     @objc func switchChange(paramTarget: UISwitch) {
@@ -57,7 +55,6 @@ class OptionsScheduleTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setBackgroundViewCell()
         setNameCellLabel()
-        setRepeatSwitch()
         self.selectionStyle = .none
         self.backgroundColor = .clear
     }
@@ -84,13 +81,18 @@ class OptionsScheduleTableViewCell: UITableViewCell {
         ])
     }
     
-    private func setRepeatSwitch() {
-        self.contentView.addSubview(reapetSwitch)
-        NSLayoutConstraint.activate([
-            reapetSwitch.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            reapetSwitch.trailingAnchor.constraint(equalTo: backgroundViewCell.trailingAnchor, constant: -20),
-        ])
-        
-        reapetSwitch.addTarget(self, action: #selector(switchChange(paramTarget:)), for: .valueChanged)
+    private func setRepeatSwitch(indexPath: IndexPath) {
+        if indexPath == [4, 0] {
+            if !self.contentView.subviews.contains(reapetSwitch) {
+                self.contentView.addSubview(reapetSwitch)
+                NSLayoutConstraint.activate([
+                    reapetSwitch.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+                    reapetSwitch.trailingAnchor.constraint(equalTo: backgroundViewCell.trailingAnchor, constant: -20),
+                ])
+                reapetSwitch.addTarget(self, action: #selector(switchChange(paramTarget:)), for: .valueChanged)
+            }
+        } else {
+            reapetSwitch.removeFromSuperview()
+        }
     }
 }
