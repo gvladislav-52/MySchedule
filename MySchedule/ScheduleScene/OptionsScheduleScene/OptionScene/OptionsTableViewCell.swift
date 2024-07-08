@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OptionsScheduleTableViewCell: UITableViewCell {
+class OptionsTableViewCell: UITableViewCell {
     
     let backgroundViewCell: UIView = {
         let view = UIView()
