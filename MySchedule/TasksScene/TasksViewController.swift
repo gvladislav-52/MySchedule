@@ -26,6 +26,7 @@ class TasksViewController: UIViewController {
         title = "Tasks"
         setupCalenderView()
         setupTableView()
+        setupNavigationItem()
         
     }
 }
@@ -62,6 +63,15 @@ extension TasksViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
+    }
+    
+    private func setupNavigationItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(AddButtonTapped))
+    }
+    
+    @objc func AddButtonTapped() {
+        let tasksOption = TaskOptionTableView()
+        navigationController?.pushViewController(tasksOption, animated: true)
     }
 }
 

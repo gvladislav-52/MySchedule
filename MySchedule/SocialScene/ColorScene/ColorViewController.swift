@@ -18,7 +18,7 @@ import UIKit
 class ColorViewController: UITableViewController {
     
     let idOptionsColorCell = "idOptionsColorCell"
-    let idOptionsSheduleHeader = "idOptionsSheduleHeader"
+    let idOptionsHeader = "idOptionsSheduleHeader"
     
     let headerNameArray: [String] = ["RED", "ORANGE", "YELLOW", "GREEN", "BLUE", "DEEP BLUE", "PURPLE"]
     
@@ -32,7 +32,7 @@ class ColorViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(ColorTableViewCell.self, forCellReuseIdentifier: idOptionsColorCell)
-        tableView.register(OptionsHeaderTableViewCell.self, forHeaderFooterViewReuseIdentifier: idOptionsSheduleHeader)
+        tableView.register(OptionsHeaderTableViewCell.self, forHeaderFooterViewReuseIdentifier: idOptionsHeader)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,7 +54,7 @@ class ColorViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: idOptionsSheduleHeader) as! OptionsHeaderTableViewCell
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: idOptionsHeader) as! OptionsHeaderTableViewCell
         header.headerConfigure(nameArray: headerNameArray, section: section)
         return header
     }
