@@ -17,6 +17,7 @@
 		22088CFC2C3B0AE9006A5692 /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CFB2C3B0AE9006A5692 /* OptionsTableViewController.swift */; };
 		22088CFF2C3B0E0E006A5692 /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CFE2C3B0E0E006A5692 /* OptionsTableViewCell.swift */; };
 		22088D012C3B13F8006A5692 /* OptionsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088D002C3B13F8006A5692 /* OptionsHeaderTableViewCell.swift */; };
+		225CE5FD2C3D863A0061CEF4 /* PhotoCameraAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225CE5FC2C3D863A0061CEF4 /* PhotoCameraAlert.swift */; };
 		22A4518B2C3C3F0300545DC8 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A4518A2C3C3F0300545DC8 /* ColorTableViewCell.swift */; };
 		22A4518E2C3C4E6E00545DC8 /* TaskOptionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A4518D2C3C4E6E00545DC8 /* TaskOptionTableView.swift */; };
 		22A451942C3C6A2000545DC8 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A451932C3C6A2000545DC8 /* ContactsTableViewCell.swift */; };
@@ -50,6 +51,7 @@
 		22088CFB2C3B0AE9006A5692 /* OptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
 		22088CFE2C3B0E0E006A5692 /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
 		22088D002C3B13F8006A5692 /* OptionsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		225CE5FC2C3D863A0061CEF4 /* PhotoCameraAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCameraAlert.swift; sourceTree = "<group>"; };
 		22A4518A2C3C3F0300545DC8 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		22A4518D2C3C4E6E00545DC8 /* TaskOptionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOptionTableView.swift; sourceTree = "<group>"; };
 		22A451932C3C6A2000545DC8 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				22CDD9472C3C0F5B00722228 /* AlertTime.swift */,
 				22CDD94A2C3C1DC500722228 /* AlertForCellName.swift */,
 				22A451972C3D4A4400545DC8 /* AlertType.swift */,
+				225CE5FC2C3D863A0061CEF4 /* PhotoCameraAlert.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				22088CFF2C3B0E0E006A5692 /* OptionsTableViewCell.swift in Sources */,
 				22CDD9482C3C0F5B00722228 /* AlertTime.swift in Sources */,
 				22088CF52C3AEED7006A5692 /* UIFont.swift in Sources */,
+				225CE5FD2C3D863A0061CEF4 /* PhotoCameraAlert.swift in Sources */,
 				22D6435E2C3A9ED2002DEC5F /* SceneDelegate.swift in Sources */,
 				22D643702C3AA131002DEC5F /* ScheduleViewController.swift in Sources */,
 				22088CED2C3AD46C006A5692 /* ScheduleTableViewCell.swift in Sources */,

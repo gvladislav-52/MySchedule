@@ -27,6 +27,10 @@ class ScheduleViewController: UIViewController {
         setupCalenderView()
         setupTableView()
         setupNavigationItem()
+        
+        if #available(iOS 15.0, *) {
+            navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
+        }
     }
 }
 
