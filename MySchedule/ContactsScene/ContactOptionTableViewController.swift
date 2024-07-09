@@ -61,6 +61,16 @@ class ContactOptionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! OptionsTableViewCell
 
+        switch indexPath.section {
+        case 0: alertForCellName(label: cell.nameCellLabel, name: "Name Contact", placeholder: "Enter name contact")
+        case 1: alertForCellName(label: cell.nameCellLabel, name: "Phone Contact", placeholder: "Enter phone contact")
+        case 2: alertForCellName(label: cell.nameCellLabel, name: "Mail Contact", placeholder: "Enter mail contact")
+        case 3: alertType(label: cell.nameCellLabel) { [weak self]  (type) in
+            print(type)
+        }
+        default:
+            print("Tap ContactTableView")
+        }
     }
     
     func pushController(vc: UIViewController) {
