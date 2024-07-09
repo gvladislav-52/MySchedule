@@ -33,30 +33,19 @@ class OptionsTableViewCell: UITableViewCell {
         return repeatSwitch
     }()
     
-    func cellScheduleConfigure(nameArray: [[String]],indexPath: IndexPath) {
-        nameCellLabel.text = nameArray[indexPath.section][indexPath.row]
-        
-        if indexPath == [3,0] {
-            backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-        }
-        setRepeatSwitch(indexPath: indexPath)
-    }
-    
-    func cellTaskConfigure(nameArray: [String], indexPath: IndexPath) {
-        nameCellLabel.text = nameArray[indexPath.section]
-        
-        if indexPath == [3,0] {
-            backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-        }
-    }
-    
-    @objc func switchChange(paramTarget: UISwitch) {
-        print("switch")
-    }
+    let addImageContact: UIImageView = {
+       let imageView = UIImageView()
+        imageView.layer.cornerRadius = 10
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(systemName: "person.fill.badge.plus")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setBackgroundViewCell()
-        setNameCellLabel()
+        setupBackgroundViewCell()
+        setupNameCellLabel()
         self.selectionStyle = .none
         self.backgroundColor = .clear
     }
@@ -64,8 +53,12 @@ class OptionsTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+//MARK: - SetupLayout
+extension OptionsTableViewCell {
     
-    func setBackgroundViewCell() {
+    private func setupBackgroundViewCell() {
         self.addSubview(backgroundViewCell)
         NSLayoutConstraint.activate([
             backgroundViewCell.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
@@ -75,7 +68,7 @@ class OptionsTableViewCell: UITableViewCell {
         ])
     }
     
-    private func setNameCellLabel() {
+    private func setupNameCellLabel() {
         self.addSubview(nameCellLabel)
         NSLayoutConstraint.activate([
             nameCellLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
@@ -83,7 +76,7 @@ class OptionsTableViewCell: UITableViewCell {
         ])
     }
     
-    private func setRepeatSwitch(indexPath: IndexPath) {
+    private func setupRepeatSwitch(indexPath: IndexPath) {
         if indexPath == [4, 0] {
             if !self.contentView.subviews.contains(reapetSwitch) {
                 self.contentView.addSubview(reapetSwitch)
@@ -96,5 +89,44 @@ class OptionsTableViewCell: UITableViewCell {
         } else {
             reapetSwitch.removeFromSuperview()
         }
+    }
+    
+    private func setupAddImageContact() {
+        self.contentView.addSubview(addImageContact)
+        NSLayoutConstraint.activate([
+            addImageContact.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+            addImageContact.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            addImageContact.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
+            addImageContact.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
+        ])
+    }
+    
+    func cellScheduleConfigure(nameArray: [[String]],indexPath: IndexPath) {
+        nameCellLabel.text = nameArray[indexPath.section][indexPath.row]
+        
+        if indexPath == [3,0] {
+            backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        }
+        setupRepeatSwitch(indexPath: indexPath)
+    }
+    
+    func cellTaskConfigure(nameArray: [String], indexPath: IndexPath) {
+        nameCellLabel.text = nameArray[indexPath.section]
+        
+        if indexPath == [3,0] {
+            backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        }
+    }
+    
+    func cellContactConfigure(nameArray: [String], indexPath: IndexPath) {
+        nameCellLabel.text = nameArray[indexPath.section]
+        
+        if indexPath.section == 4 {
+            setupAddImageContact()
+        }
+    }
+    
+    @objc func switchChange(paramTarget: UISwitch) {
+        print("switch")
     }
 }
