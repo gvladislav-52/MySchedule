@@ -19,8 +19,7 @@ class MainTabBarController: UITabBarController {
         let scheduleViewController = createNavController(vc: ScheduleViewController(), itemName: "Schedule", ItemImage: "calendar.badge.clock")
         let tasksViewController = createNavController(vc: TasksViewController(), itemName: "Task", ItemImage: "text.badge.checkmark")
         let contactsViewController = createNavController(vc: ContactsTableViewController(), itemName: "Contacts", ItemImage: "rectangle.stack.person.crop")
-        
-        setupTabUI()
+    
         viewControllers = [scheduleViewController, tasksViewController, contactsViewController]
     }
     
@@ -32,45 +31,48 @@ class MainTabBarController: UITabBarController {
         var navCotroller = UINavigationController(rootViewController: vc)
         navCotroller.tabBarItem = item
         setupNavUI(nav: &navCotroller)
-        
+        //setupTabUI(nav: &navCotroller)
         return navCotroller
     }
     
     private func setupNavUI(nav: inout UINavigationController) {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .darkGray
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-
-        nav.navigationBar.standardAppearance = appearance
-        nav.navigationBar.scrollEdgeAppearance = appearance
-        nav.navigationBar.tintColor = .white
+//        let appearance = UINavigationBarAppearance()
+//        appearance.configureWithOpaqueBackground()
+//        appearance.backgroundColor = .darkGray
+//        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+//        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//
+//        nav.navigationBar.standardAppearance = appearance
+//        nav.navigationBar.scrollEdgeAppearance = appearance
+//        nav.navigationBar.tintColor = .white
+        
+        nav.navigationBar.scrollEdgeAppearance = nav.navigationBar.standardAppearance
+        
     }
     
-    private func setupTabUI() {
+//    private func setupTabUI(nav: inout UINavigationController) {
 
-        let appearance = UITabBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .darkGray
-        
-        let itemAppearance = UITabBarItemAppearance()
-        itemAppearance.normal.titleTextAttributes = [
-            .font: UIFont.systemFont(ofSize: 14),
-            .foregroundColor: UIColor.lightGray
-        ]
-        itemAppearance.selected.titleTextAttributes = [
-            .font: UIFont.systemFont(ofSize: 16),
-            .foregroundColor: UIColor.white
-        ]
-        itemAppearance.normal.iconColor = .lightGray
-        itemAppearance.selected.iconColor = .white
-        
-        appearance.stackedLayoutAppearance = itemAppearance
-        
-        tabBar.standardAppearance = appearance
-        tabBar.scrollEdgeAppearance = appearance
-    }
+//        let appearance = UITabBarAppearance()
+//        appearance.configureWithOpaqueBackground()
+//        appearance.backgroundColor = .darkGray
+//
+//        let itemAppearance = UITabBarItemAppearance()
+//        itemAppearance.normal.titleTextAttributes = [
+//            .font: UIFont.systemFont(ofSize: 14),
+//            .foregroundColor: UIColor.lightGray
+//        ]
+//        itemAppearance.selected.titleTextAttributes = [
+//            .font: UIFont.systemFont(ofSize: 16),
+//            .foregroundColor: UIColor.white
+//        ]
+//        itemAppearance.normal.iconColor = .lightGray
+//        itemAppearance.selected.iconColor = .white
+//
+//        appearance.stackedLayoutAppearance = itemAppearance
+//
+//        tabBar.standardAppearance = appearance
+//        tabBar.scrollEdgeAppearance = appearance
+//    }
     
 }
 

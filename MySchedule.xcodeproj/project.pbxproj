@@ -17,6 +17,14 @@
 		22088CFC2C3B0AE9006A5692 /* OptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CFB2C3B0AE9006A5692 /* OptionsTableViewController.swift */; };
 		22088CFF2C3B0E0E006A5692 /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088CFE2C3B0E0E006A5692 /* OptionsTableViewCell.swift */; };
 		22088D012C3B13F8006A5692 /* OptionsHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088D002C3B13F8006A5692 /* OptionsHeaderTableViewCell.swift */; };
+		22377ABE2C46856800403C22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22377ABD2C46856700403C22 /* GoogleService-Info.plist */; };
+		224F9FB52C467A950013B3AC /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F9FB42C467A950013B3AC /* ScheduleModel.swift */; };
+		224F9FB82C467B400013B3AC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 224F9FB72C467B400013B3AC /* FirebaseAnalytics */; };
+		224F9FBA2C467B4A0013B3AC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 224F9FB92C467B4A0013B3AC /* FirebaseAuth */; };
+		224F9FBC2C467B590013B3AC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 224F9FBB2C467B590013B3AC /* FirebaseFirestore */; };
+		224F9FBE2C467B610013B3AC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 224F9FBD2C467B610013B3AC /* FirebaseStorage */; };
+		224F9FC02C467BA00013B3AC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F9FBF2C467BA00013B3AC /* APIManager.swift */; };
+		225CE5FD2C3D863A0061CEF4 /* PhotoCameraAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225CE5FC2C3D863A0061CEF4 /* PhotoCameraAlert.swift */; };
 		22A4518B2C3C3F0300545DC8 /* ColorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A4518A2C3C3F0300545DC8 /* ColorTableViewCell.swift */; };
 		22A4518E2C3C4E6E00545DC8 /* TaskOptionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A4518D2C3C4E6E00545DC8 /* TaskOptionTableView.swift */; };
 		22A451942C3C6A2000545DC8 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A451932C3C6A2000545DC8 /* ContactsTableViewCell.swift */; };
@@ -50,6 +58,10 @@
 		22088CFB2C3B0AE9006A5692 /* OptionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewController.swift; sourceTree = "<group>"; };
 		22088CFE2C3B0E0E006A5692 /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
 		22088D002C3B13F8006A5692 /* OptionsHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		22377ABD2C46856700403C22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		224F9FB42C467A950013B3AC /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		224F9FBF2C467BA00013B3AC /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		225CE5FC2C3D863A0061CEF4 /* PhotoCameraAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCameraAlert.swift; sourceTree = "<group>"; };
 		22A4518A2C3C3F0300545DC8 /* ColorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTableViewCell.swift; sourceTree = "<group>"; };
 		22A4518D2C3C4E6E00545DC8 /* TaskOptionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOptionTableView.swift; sourceTree = "<group>"; };
 		22A451932C3C6A2000545DC8 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,6 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224F9FB82C467B400013B3AC /* FirebaseAnalytics in Frameworks */,
+				224F9FBC2C467B590013B3AC /* FirebaseFirestore in Frameworks */,
+				224F9FBA2C467B4A0013B3AC /* FirebaseAuth in Frameworks */,
+				224F9FBE2C467B610013B3AC /* FirebaseStorage in Frameworks */,
 				5730226269B2B5C1168DADC7 /* Pods_MySchedule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +191,15 @@
 			path = OptionsScheduleScene;
 			sourceTree = "<group>";
 		};
+		224F9FB32C467A800013B3AC /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				224F9FB42C467A950013B3AC /* ScheduleModel.swift */,
+				224F9FBF2C467BA00013B3AC /* APIManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		22A451862C3C3D7400545DC8 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +268,7 @@
 				22CDD9472C3C0F5B00722228 /* AlertTime.swift */,
 				22CDD94A2C3C1DC500722228 /* AlertForCellName.swift */,
 				22A451972C3D4A4400545DC8 /* AlertType.swift */,
+				225CE5FC2C3D863A0061CEF4 /* PhotoCameraAlert.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -268,6 +294,8 @@
 		22D6435A2C3A9ED2002DEC5F /* MySchedule */ = {
 			isa = PBXGroup;
 			children = (
+				22377ABD2C46856700403C22 /* GoogleService-Info.plist */,
+				224F9FB32C467A800013B3AC /* Firebase */,
 				22088CEE2C3AE251006A5692 /* Extensions */,
 				22088CE82C3ACC69006A5692 /* App */,
 				22A451912C3C545D00545DC8 /* SocialScene */,
@@ -314,6 +342,12 @@
 			dependencies = (
 			);
 			name = MySchedule;
+			packageProductDependencies = (
+				224F9FB72C467B400013B3AC /* FirebaseAnalytics */,
+				224F9FB92C467B4A0013B3AC /* FirebaseAuth */,
+				224F9FBB2C467B590013B3AC /* FirebaseFirestore */,
+				224F9FBD2C467B610013B3AC /* FirebaseStorage */,
+			);
 			productName = MySchedule;
 			productReference = 22D643582C3A9ED2002DEC5F /* MySchedule.app */;
 			productType = "com.apple.product-type.application";
@@ -342,6 +376,9 @@
 				Base,
 			);
 			mainGroup = 22D6434F2C3A9ED2002DEC5F;
+			packageReferences = (
+				224F9FB62C467B0E0013B3AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 22D643592C3A9ED2002DEC5F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +395,7 @@
 			files = (
 				22D643682C3A9ED4002DEC5F /* LaunchScreen.storyboard in Resources */,
 				22D643652C3A9ED4002DEC5F /* Assets.xcassets in Resources */,
+				22377ABE2C46856800403C22 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,14 +460,17 @@
 				22088CF12C3AE275006A5692 /* UIStackView.swift in Sources */,
 				22D6435C2C3A9ED2002DEC5F /* AppDelegate.swift in Sources */,
 				22A451962C3C736200545DC8 /* ContactOptionTableViewController.swift in Sources */,
+				224F9FC02C467BA00013B3AC /* APIManager.swift in Sources */,
 				22088CFA2C3B01B7006A5692 /* PressButtonProtocols.swift in Sources */,
 				22A451942C3C6A2000545DC8 /* ContactsTableViewCell.swift in Sources */,
 				22D643722C3AA140002DEC5F /* TasksViewController.swift in Sources */,
 				22088CEB2C3AD0E0006A5692 /* CalendarController.swift in Sources */,
 				22CDD94F2C3C2A1B00722228 /* TeachersViewController.swift in Sources */,
 				22088CFF2C3B0E0E006A5692 /* OptionsTableViewCell.swift in Sources */,
+				224F9FB52C467A950013B3AC /* ScheduleModel.swift in Sources */,
 				22CDD9482C3C0F5B00722228 /* AlertTime.swift in Sources */,
 				22088CF52C3AEED7006A5692 /* UIFont.swift in Sources */,
+				225CE5FD2C3D863A0061CEF4 /* PhotoCameraAlert.swift in Sources */,
 				22D6435E2C3A9ED2002DEC5F /* SceneDelegate.swift in Sources */,
 				22D643702C3AA131002DEC5F /* ScheduleViewController.swift in Sources */,
 				22088CED2C3AD46C006A5692 /* ScheduleTableViewCell.swift in Sources */,
@@ -644,6 +685,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		224F9FB62C467B0E0013B3AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		224F9FB72C467B400013B3AC /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 224F9FB62C467B0E0013B3AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		224F9FB92C467B4A0013B3AC /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 224F9FB62C467B0E0013B3AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		224F9FBB2C467B590013B3AC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 224F9FB62C467B0E0013B3AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		224F9FBD2C467B610013B3AC /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 224F9FB62C467B0E0013B3AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22D643502C3A9ED2002DEC5F /* Project object */;
 }
