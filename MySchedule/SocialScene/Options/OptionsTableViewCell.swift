@@ -103,12 +103,13 @@ extension OptionsTableViewCell {
     
     func cellScheduleConfigure(nameArray: [[String]],indexPath: IndexPath) {
         nameCellLabel.text = nameArray[indexPath.section][indexPath.row]
-        
+        backgroundViewCell.backgroundColor = .white
         if indexPath == [3,0] {
             backgroundViewCell.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         }
         setupRepeatSwitch(indexPath: indexPath)
     }
+
     
     func cellTaskConfigure(nameArray: [String], indexPath: IndexPath) {
         nameCellLabel.text = nameArray[indexPath.section]

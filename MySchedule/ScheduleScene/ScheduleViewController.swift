@@ -74,6 +74,7 @@ extension ScheduleViewController {
     
     @objc func AddButtonTapped() {
         let scheduleOption = OptionTableViewController()
+        scheduleOption.fetchFirestoreData()
         navigationController?.pushViewController(scheduleOption, animated: true)
     }
 }
